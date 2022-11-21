@@ -63,7 +63,11 @@ public final class ConcurrentGUI extends JFrame {
 
 
         //Rendo visibile frame
-        this.frame.pack();
+        final Dimension schermo = Toolkit.getDefaultToolkit().getScreenSize();
+        final int width = (int) schermo.getWidth();
+        final int height = (int) schermo.getHeight();
+        final  int proporzione = 5;
+        this.frame.setSize(width / proporzione, height / proporzione);
         this.frame.setVisible(true);
 
         //ATTIVO Thread
