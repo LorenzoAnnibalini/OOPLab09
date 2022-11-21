@@ -71,7 +71,7 @@ public final class ConcurrentGUI extends JFrame {
         this.frame.setVisible(true);
 
         //ATTIVO Thread
-        this.agent.run();
+        new Thread(agent).run();
     }
 
     private class Agent implements Runnable {
